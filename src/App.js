@@ -6,12 +6,17 @@ import { testData } from './dbData';
 
 class App extends React.Component {
   // constructor
-  constructor(props) {
-    super(props);
-    this.state = {
-      profiles: testData, 
-    };
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     profiles: testData, 
+  //   };
+  // }
+
+  state = {
+    profiles: testData,
   }
+
   // this
   // render -- required
   render() {
