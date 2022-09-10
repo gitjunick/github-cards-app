@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import CardList from './components/CardList';
+import Form from './components/Form';
 
 class App extends React.Component {
   // constructor
@@ -9,9 +10,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="header">
-        {this.props.title}
-        </div>
+        <div className="header">{this.props.title}</div>
+        <Form />
         <CardList />
       </div>
     );
