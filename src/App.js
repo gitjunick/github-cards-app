@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import CardList from './components/CardList';
 import Form from './components/Form';
-import { testData } from './dbData';
 
 class App extends React.Component {
   // constructor
@@ -14,7 +13,13 @@ class App extends React.Component {
   // }
 
   state = {
-    profiles: testData,
+    profiles: [],
+  }
+
+  addNewProfile = (profileData) => {
+    this.setState(prevState => ({
+      profiles: [...prevState.profiles, profileData],
+    }))
   }
 
   // this
@@ -23,7 +28,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="header">{this.props.title}</div>
-        <Form />
+        <Form onSubmit={this.addNewProfile}/>
         <CardList profiles={this.state.profiles}/>
       </div>
     );

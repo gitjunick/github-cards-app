@@ -9,7 +9,7 @@ class Card extends React.Component {
                 <img src={profile.avatar_url} alt="profile pic"/>
                 <div className="info" style={{ display: 'inline-block', marginLeft: 10 }}>
                     <div className="name" style={{fontSize: '125%'}}>{profile.login}</div>
-                    <div className="company">{profile.type}</div>
+                    <div className="company">{profile.company}</div>
                 </div>
             </div>
         );
