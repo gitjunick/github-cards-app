@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Card from './components/Card';
+import CardList from './components/CardList';
 
 class App extends React.Component {
   // constructor
@@ -12,7 +12,7 @@ class App extends React.Component {
         <div className="header">
         {this.props.title}
         </div>
-        <Card />
+        <CardList />
       </div>
     );
   }
