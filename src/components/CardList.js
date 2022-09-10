@@ -5,9 +5,7 @@ import Card from "./Card";
 const CardList = (props) => {
     return(
         <div>
-            <Card {...testData[0]}/>
-            <Card {...testData[1]}/>
-            <Card {...testData[2]}/>
+            {testData.map(profile => <Card {...profile} />)}
         </div>
     );
 }
