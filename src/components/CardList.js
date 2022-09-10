@@ -1,11 +1,10 @@
 import React from "react";
-import { testData } from "../dbData";
 import Card from "./Card";
 
 const CardList = (props) => {
     return(
         <div>
-            {testData.map(profile => <Card {...profile} />)}
+            {props.profiles.map(profile => <Card {...profile} />)}
         </div>
     );
 }
